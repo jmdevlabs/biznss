@@ -6,21 +6,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Biznss is your digital brand management tool. Share your info instantly, network smarter. Available on Android and iOS.">
   <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f6f7fb; color: #1a2236; }
-    .container { max-width: 500px; margin: 40px auto; background: #fff; border-radius: 14px; padding: 32px 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);}
-    h1 { font-size: 2.2em; margin-bottom: 12px;}
-    .app-links img { width: 155px; margin: 10px;}
-    .features { margin: 28px 0;}
-    .features li { margin-bottom: 8px;}
-    .footer { text-align: center; color: #aaa; margin-top: 36px;}
-    .logo { width: 64px; height: 64px; margin-bottom: 16px; }
+    body {
+      background: #f6f7fb;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .banner {
+      width: 100%;
+      max-width: 720px;
+      height: 220px;
+      background: url('images/banner.jpg') center/cover no-repeat;
+      border-radius: 18px 18px 0 0;
+      margin-top: 40px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .container {
+      background: #fff;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+      border-radius: 0 0 18px 18px;
+      padding: 36px 32px 32px 32px;
+      box-shadow: 0 8px 36px rgba(0,0,0,0.10);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      width: 68px; height: 68px; margin-bottom: 12px; margin-top: -44px; background: #fff; border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      display: flex; align-items: center; justify-content: center;
+    }
+    h1 {
+      font-size: 2.6em; font-weight: 700; margin-bottom: 12px; margin-top: 8px; text-align: center;
+    }
+    .tagline {
+      font-size: 1.15em;
+      color: #2d3754;
+      margin-bottom: 22px;
+      text-align: center;
+      max-width: 520px;
+    }
+    .app-links {
+      display: flex; gap: 16px; margin-bottom: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .app-links img { height: 54px; }
+    .features {
+      width: 100%;
+      margin: 24px 0 16px 0;
+      padding: 0;
+      list-style: none;
+      text-align: left;
+    }
+    .features li {
+      margin-bottom: 12px;
+      font-size: 1.11em;
+      position: relative;
+      padding-left: 28px;
+    }
+    .features li:before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #21b573;
+      font-weight: bold;
+      font-size: 1.18em;
+    }
+    .footer {
+      text-align: center; color: #888; margin: 28px 0 10px 0; font-size: 1em;
+    }
+    @media (max-width: 600px) {
+      .banner, .container { max-width: 98vw; }
+      .container { padding: 16px 4vw 22px 4vw; }
+      .features { font-size: 1em;}
+    }
   </style>
 </head>
 <body>
+  <div class="banner"></div>
   <div class="container">
-    <img src="https://www.biznss.app/logo192.png" alt="Biznss Logo" class="logo" />
+    <img src="images/logo.png" alt="Biznss Logo" class="logo" />
     <h1>Biznss</h1>
-    <p>The smarter way to manage and share your digital business card. Grow your network, your way.</p>
+    <div class="tagline">
+      The smarter way to manage and share your digital business card.<br>
+      Grow your network, your way.
+    </div>
     <div class="app-links">
       <a href="https://play.google.com/store/apps/details?id=com.jmdevlabs.card" target="_blank">
         <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
@@ -42,3 +117,4 @@
   <div class="footer">© 2025 Biznss</div>
 </body>
 </html>
+
