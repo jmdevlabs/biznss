@@ -19,7 +19,7 @@
       width: 100%;
       max-width: 720px;
       height: 220px;
-      background: url('ios.webp') center/cover no-repeat;
+      background: url('images/banner.jpg') center/cover no-repeat;
       border-radius: 18px 18px 0 0;
       margin-top: 40px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -50,15 +50,44 @@
       text-align: center;
       max-width: 520px;
     }
-    .app-links {
-      display: flex; gap: 16px; margin-bottom: 32px;
+    .download-buttons {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 32px;
+      margin-top: 10px;
       justify-content: center;
       flex-wrap: wrap;
     }
-    .app-links img { height: 54px; }
+    .btn-download {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #222a35;
+      color: #fff;
+      font-size: 1.05em;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(34,42,53,0.10);
+      transition: background 0.15s, transform 0.15s;
+    }
+    .btn-download:hover {
+      background: #3241f2;
+      color: #fff;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 16px rgba(34,42,53,0.18);
+    }
+    .btn-download svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+      display: inline-block;
+    }
     .features {
       width: 100%;
-      margin: 24px 0 16px 0;
+      margin: 24px 0 0 0;
       padding: 0;
       list-style: none;
       text-align: left;
@@ -84,6 +113,7 @@
       .banner, .container { max-width: 98vw; }
       .container { padding: 16px 4vw 22px 4vw; }
       .features { font-size: 1em;}
+      .download-buttons { flex-direction: column; gap: 12px;}
     }
   </style>
 </head>
@@ -96,12 +126,16 @@
       The smarter way to manage and share your digital business card.<br>
       Grow your network, your way.
     </div>
-    <div class="app-links">
-      <a href="https://play.google.com/store/apps/details?id=com.jmdevlabs.card" target="_blank">
-        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+    <div class="download-buttons">
+      <a href="https://play.google.com/store/apps/details?id=com.jmdevlabs.card" class="btn-download" target="_blank">
+        <!-- Android SVG Icon -->
+        <svg viewBox="0 0 24 24"><path d="M17.6 9.48l1.43-2.47c.13-.22.06-.51-.16-.64-.22-.13-.51-.06-.64.16l-1.46 2.53c-1.15-.47-2.43-.75-3.77-.75s-2.62.28-3.77.75l-1.46-2.53c-.13-.22-.42-.29-.64-.16-.22.13-.29.42-.16.64l1.43 2.47c-1.83.93-3.05 2.74-3.05 4.84 0 .43.35.78.78.78h13.63c.43 0 .78-.35.78-.78 0-2.1-1.22-3.91-3.05-4.84zM8.39 19.09c0 .5.41.91.91.91.5 0 .91-.41.91-.91v-2.44h1.58v2.44c0 .5.41.91.91.91.5 0 .91-.41.91-.91v-2.44h1.04c.31 0 .56-.25.56-.56s-.25-.56-.56-.56H7.86c-.31 0-.56.25-.56.56s.25.56.56.56h1.04v2.44z"/></svg>
+        Get for Android
       </a>
-      <a href="https://apps.apple.com/us/app/biznss/id6483928290" target="_blank">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+      <a href="https://apps.apple.com/us/app/biznss/id6483928290" class="btn-download" target="_blank">
+        <!-- Apple SVG Icon -->
+        <svg viewBox="0 0 24 24"><path d="M16.68 13.23c.01-2.14 1.75-3.15 1.83-3.2-1-1.45-2.56-1.66-3.11-1.69-1.32-.13-2.57.77-3.25.77-.68 0-1.72-.75-2.83-.73-1.45.02-2.79.84-3.53 2.14-1.51 2.61-.39 6.45 1.08 8.57.72 1.06 1.57 2.24 2.7 2.19 1.1-.04 1.52-.71 2.86-.71 1.34 0 1.7.71 2.86.69 1.19-.02 1.94-1.08 2.66-2.14.46-.67.65-1.03 1.02-1.81-2.69-1.02-3.12-3.83-3.14-3.92zm-2.46-7.19c.57-.7.95-1.66.84-2.64-.81.03-1.79.54-2.37 1.24-.52.61-.97 1.59-.8 2.52.85.06 1.76-.49 2.33-1.12z"/></svg>
+        Get for iOS
       </a>
     </div>
     <ul class="features">
